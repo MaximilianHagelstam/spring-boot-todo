@@ -16,14 +16,14 @@ public class Task {
             strategy = GenerationType.SEQUENCE,
             generator = "task_sequence"
     )
-    private Long id;
+    private Integer id;
     private String title;
     private String description;
 
     public Task() {
     }
 
-    public Task(Long id, String title, String description) {
+    public Task(Integer id, String title, String description) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -34,11 +34,11 @@ public class Task {
         this.description = description;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
