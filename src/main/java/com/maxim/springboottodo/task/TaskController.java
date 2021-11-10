@@ -36,4 +36,9 @@ public class TaskController {
     public Optional<Task> getTaskById(@PathVariable("taskId") Integer taskId) {
         return taskService.getTaskById(taskId);
     }
+
+    @PutMapping("{taskId}")
+    public Task updateTask(@PathVariable("taskId") Integer taskId, @RequestBody Task task) {
+        return taskService.updateTask(taskId, task);
+    }
 }
